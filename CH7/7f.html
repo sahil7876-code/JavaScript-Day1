@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Fahren(celsius) {
+                return (celsius * 9 / 5) + 32;
+            }
+
+            function Celsius(fahrenheit) {
+                return (fahrenheit - 32) * 5 / 9;
+            }
+
+            function Temp(degrees, unit) {
+                if (unit === 'C') {
+                const result = Fahren(degrees);
+                return `${result}F`;
+                } else if (unit === 'F') {
+                const result = Celsius(degrees);
+                return `${result}C`;
+                }
+            }
+
+            console.log(Temp(25, 'C'));
+            console.log(Temp(86, 'F'));
+        </script>
+    </body>
+</html>
